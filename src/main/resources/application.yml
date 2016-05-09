@@ -1,0 +1,38 @@
+
+security:
+  cors.allow.origin: "*"
+
+endpoints:
+  enabled: false
+  info:
+    enabled: true
+    sensitive: false
+  health:
+    enabled: true
+    sensitive: false
+
+# Swagger end-point
+springfox.documentation.swagger.v2.path: "/api/v1/docs"
+management.add-application-context-header: false
+
+# Logging
+logging:
+  level:
+    com.pb: DEBUG
+    springfox: WARN
+    org.springframework.web.client: INFO
+
+---
+spring:
+  profiles: default
+
+---
+
+spring:
+  profiles: production
+
+
+---
+
+spring:
+  profiles: test

@@ -1,0 +1,12 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+// Eclipse
+task copyEclipseSettings(type: Copy) {
+    from("${rootProject.projectDir}/gradle/ide/eclipse") {
+        include "*.prefs"
+    }
+    into ".settings"
+}
+eclipseJdt.finalizedBy copyEclipseSettings
