@@ -24,7 +24,7 @@ import springfox.documentation.annotations.ApiIgnore;
 
 @RestController
 @RequestMapping("/api/v1")
-@Api(description = "Submit files for processing", value = "Application API")
+@Api(description = "Application API", value = "Application API")
 public class UploadController {
 
     @ApiOperation(produces = "application/json", value = "Upload file")
